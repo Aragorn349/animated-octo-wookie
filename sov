@@ -1,0 +1,22 @@
+NVT                                               ::  Read(nafile,'(a)') chosen_ensemble  NVT or NVE
+5000     50     0.001                             ::  read(nafile,*)     nstep,icntrl,dt	
+162                                               ::  Temperature in Kelvin
+EW                                                ::  read(nafile,'(a4)') the_dipole (EW YK NO)
+SS                                                ::  read(nafile,'(a4)') the_shape (GB LJ SS EM SP)
+T 6.0 10.5  0.085      2.6                        ::  MOVIE, epsilon_interaction(1,1), epsilon_interaction_gb ,  epsilon_interaction_gb1, rjicut 
+
+The charge:
+EW = Ewald summation   T=1.35 corresponds to 162.37
+YK = Yukawa   exp(-alpha r)/r
+NO = no electrostatics
+
+The shape:
+GB = 3:1 Gay-Berne Ellipsoid
+LJ = Lennard Jones 12-6
+SS = Soft sphere 1/r^12
+EM = EM2 interaction
+SP = SPAM interaction with composition dynamics
+
+
+
+
